@@ -111,6 +111,49 @@
             height: 200px;
             overflow-y: auto;
         }
+
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            /* Stack the header (name and profile pic) vertically */
+            .block > div[style*="flex-direction: row"] {
+                flex-direction: column-reverse !important;
+                align-items: center;
+                text-align: center;
+            }
+
+            /* Center the social links on mobile */
+            .block div[style*="display: flex; gap: 0.6rem"] {
+                justify-content: center;
+            }
+
+            /* Stack project cards vertically */
+            .proj {
+                flex-direction: column;
+                min-height: auto;
+            }
+
+            .proj-img {
+                width: 100%;
+                height: 200px;
+            }
+
+            .proj-container {
+                height: auto; /* Allow the container to grow instead of scrolling internally */
+                overflow-y: visible;
+            }
+
+            .proj-content {
+                padding: 1rem;
+            }
+
+            /* Ensure buttons and actions align better on small screens */
+            .proj-actions {
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -120,7 +163,7 @@
                 <h1>Munteanu David-Ioan</h1>
                 <p><b>Full-Stack Developer | BSc. CSE @ TU Delft</b> <br> Building high-availability systems and leading engineering teams. Specialized in web & software <b>architectures</b> and <b>LLM</b> integration.</p>
                 <div style = "display: flex; gap: 0.6rem">
-                    <a href = "https://www.github.com/BOMBATONGA" target="_blank"><img style = "height: 28px;" src = "src/github_logo.png?v=2"></a>
+                    <a href = "https://github.com/davidmunteanu" target="_blank"><img style = "height: 28px;" src = "src/github_logo.png?v=2"></a>
                     <a href = "https://www.linkedin.com/in/davidmunteanu/" target="_blank"><img style = "height: 28px;" src = "src/linkedin_logo.png?v=2"></a>
                     <a href = "src/CV_DavidMunteanu.pdf" target="_blank"><img style = "height: 28px;" src = "src/cv_logo.png?v=2"></a>
                     <a href = "mailto:davidmunteanu2006@gmail.com" target="_blank"><img style = "height: 28px;" src = "src/mail_logo.png"></a>
@@ -141,7 +184,7 @@
                 </div>
                 <div class="proj-actions">
                     <a href = "https://spotyvibe.up.railway.app/" style = "width: 88px" target="_blank"><button class="btn-try">Try!</button></a>
-                    <a href="https://www.github.com/BOMBATONGA" target="_blank">
+                    <a href="https://github.com/davidmunteanu/Spotyvibe" target="_blank">
                         <img class="icon-gh" src="src/github_logo.png?v=2" alt="GitHub">
                     </a>
                 </div>
