@@ -1,0 +1,75 @@
+body {
+    background-image: url('src/background2.jpg'); 
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+h1, h2, h3{
+    font-weight: 500;
+}
+
+.block {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); 
+    border-radius: 15px;
+    padding: 2rem;
+    color: white;
+    width: 90%;          /* Mobile first */
+    max-width: 800px;    /* Desktop cap */
+    box-sizing: border-box;
+}
+
+.proj {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    overflow: hidden;    /* Keeps image corners clipped */
+    background: rgba(0, 0, 0, 0.2);
+    min-height: 180px;   /* Avoids vh issues */
+}
+
+.proj img {
+    width: 40%;          /* Proportional width */
+    object-fit: cover;   /* Prevents stretching */
+}
+
+.proj-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+.proj-text h3 { margin: 0 0 0.5rem 0; }
+.proj-text p { margin: 0; font-size: 0.9rem; opacity: 0.8; }
+
+.proj-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.btn-try {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    background: aliceblue;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.icon-gh { height: 28px; width: 28px;}
